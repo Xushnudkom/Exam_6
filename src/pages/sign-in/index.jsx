@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import SnackbarWithDecorators from "../../components/notification";
-import LoginIcon from '@mui/icons-material/Login';
 import "./login.css";
 
 const Login = () => {
@@ -33,6 +32,9 @@ const Login = () => {
       setType("danger");
     }
   };
+  const navRegis =() => {
+    navigate("/sign-up")
+  }
 
   return (
     <div className="login">
@@ -41,7 +43,7 @@ const Login = () => {
         <div>
           <div className="card">
             <div className="card-header">
-              <LoginIcon className="log_icon"/>
+              
               <h1 className="text-center text-warning">Login</h1>
             </div>
             <div className="card-body">
@@ -65,6 +67,7 @@ const Login = () => {
                   name="password"
                   type="password"
                 />
+                <p onClick={navRegis} className="registr_text">Registration</p>
               </form>
             </div>
             <div className="card-footer">
